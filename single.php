@@ -18,6 +18,9 @@
 				<div><i class="fa fa-arrow-circle-left"></i><?php previous_post_link('<strong>%link</strong>'); ?></div>
 				<div><?php next_post_link('<strong>%link</strong>'); ?><i class="fa fa-arrow-circle-right"></i></div>
 			</div>
+            <?php if (comments_open() || get_comments_number()) :
+                comments_template();
+            endif; ?>
 		<?php endwhile; ?>
 		<?php endif; ?>
 	</div>
