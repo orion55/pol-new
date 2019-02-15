@@ -6,11 +6,15 @@
 }
 
 #commentform {
-  margin: 0 auto;
+  margin: 0 auto 25px auto;
   p {
     line-height: normal;
     margin: 0;
   }
+}
+
+#comments {
+  padding-top: 20px;
 }
 
 form.comment-form {
@@ -35,6 +39,8 @@ form.comment-form {
     color: #000000;
     font-weight: 300;
     background-color: white;
+    border: 1px solid #a9a9a9;
+    height: 35px;
   }
 }
 
@@ -54,6 +60,7 @@ form.comment-form {
     background-color: white;
     width: 876px;
     height: 120px;
+    border: 1px solid #a9a9a9;
   }
 }
 
@@ -62,6 +69,7 @@ form.comment-form {
   @include size(3);
   @include size-md(6);
   @include size-xs(12);
+  padding-bottom: 0;
   input {
     border: $color-main solid 1px;
     border-radius: 25px;
@@ -110,13 +118,43 @@ form.comment-form {
 .comment__list {
   list-style: none;
   margin: 0;
-  padding-bottom: 40px;
+  //padding-bottom: 40px;
+  .comment {
+    list-style-image: none;
+    line-height: normal;
+  }
+  p {
+    line-height: normal;
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 16px;
+  }
+  br {
+    display: block;
+    content: "";
+    margin-bottom: 10px;
+  }
+  .avatar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 45px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  }
+  .fn {
+    font-weight: bolder;
+    font-style: normal;
+  }
   .children {
     list-style: none;
     margin-left: 105px;
   }
+  .comment-reply-title {
+    padding-bottom: 20px;
+    text-align: center;
+  }
   .comment-body {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     position: relative;
     padding: 25px 25px 25px 150px;
     background-color: #efefef;
@@ -133,15 +171,19 @@ form.comment-form {
       color: white;
       font-size: 18px;
       font-weight: 400;
+      display: block;
+      width: 20%;
       &:hover {
         background-color: $color-two;
         border: $color-two solid 1px;
+        text-decoration: none;
       }
     }
     .comment-meta {
       display: flex;
       flex-direction: row;
-      padding-bottom: 22px;
+      padding-bottom: 10px;
+      font-size: 16px;
       .comment-metadata {
         margin-left: 20px;
         a {
@@ -152,15 +194,21 @@ form.comment-form {
           }
         }
       }
-      .avatar {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        border-radius: 45px;
-        box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-      }
+    }
+    .comment-author {
+      float: left;
+      margin-right: 7px;
+      font-size: 16px;
     }
   }
+}
+
+p.logged-in-as {
+  padding-bottom: 20px;
+}
+
+#commentform > p.form-submit {
+  padding-bottom: 0;
 }
 
 @media only screen and (min-device-width: 768px) and (max-width: 1199px) {
