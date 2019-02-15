@@ -6,6 +6,11 @@
   margin: 0 auto;
 }
 
+#commentform p {
+  line-height: normal;
+  margin: 0;
+}
+
 form.comment-form {
   display: flex;
   flex-wrap: wrap;

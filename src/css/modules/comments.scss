@@ -7,6 +7,10 @@
 
 #commentform {
   margin: 0 auto;
+  p {
+    line-height: normal;
+    margin: 0;
+  }
 }
 
 form.comment-form {
@@ -163,7 +167,7 @@ form.comment-form {
   form.comment-form {
     width: 100%;
   }
-  .comment-form-comment textarea{
+  .comment-form-comment textarea {
     width: 100%;
   }
 }
@@ -199,13 +203,13 @@ form.comment-form {
   form.comment-form {
     width: 100%;
   }
-  .comment-form-comment textarea{
+  .comment-form-comment textarea {
     width: 100%;
   }
-  .comment-form-author input, .comment-form-email input{
+  .comment-form-author input, .comment-form-email input {
     width: 100%;
   }
-  .paper_comments{
+  .paper_comments {
     padding-bottom: 40px;
   }
 }
