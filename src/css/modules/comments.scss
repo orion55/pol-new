@@ -218,6 +218,26 @@ p.logged-in-as {
   .comment-form-comment textarea {
     width: 100%;
   }
+  .comment__list .comment-body .reply a {
+    width: 50%;
+  }
+  #commentform {
+    flex-direction: column;
+    padding: 20px 20px;
+    margin-bottom: 0;
+    .comment-form-author, .comment-form-email, .comment-form-comment {
+      width: 100%;
+    }
+    p.form-submit {
+      width: 100%;
+    }
+  }
+  .form-submit input {
+    width: 100%;
+  }
+  .comment-form-author input, .comment-form-email input {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -226,26 +246,34 @@ p.logged-in-as {
   }
   .comment__list {
     padding-bottom: 20px;
+    padding-left: 0;
+    .avatar {
+      position: static;
+      margin: 0 auto 10px;
+    }
+    .fn {
+      text-align: center;
+    }
     .comment-body {
       padding-left: 25px;
       .comment-meta {
         flex-direction: column;
         text-align: center;
-        .avatar {
-          position: static;
-          margin: 0 auto 10px;
+      }
+      .comment-author {
+        display: flex;
+        flex-direction: column;
+        float: none;
+        .says {
+          display: none;
         }
-        .comment-author {
-          display: flex;
-          flex-direction: column;
-          .says {
-            display: none;
-          }
-        }
+      }
+      .reply a {
+        width: 100%;
       }
     }
     .children {
-      margin-left: 40px;
+      margin-left: 0;
     }
   }
   form.comment-form {
@@ -259,5 +287,29 @@ p.logged-in-as {
   }
   .paper_comments {
     padding-bottom: 40px;
+  }
+  .blog_page .banner h1 {
+    font-size: 20px;
+  }
+  .content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #comments {
+    padding-top: 0;
+  }
+  .comments__title {
+    margin-bottom: 20px;
+  }
+  #commentform {
+    flex-direction: column;
+    padding: 20px 20px;
+    margin-bottom: 0;
+    .comment-form-author, .comment-form-email, .comment-form-comment {
+      width: 100%;
+    }
+  }
+  .form-submit input {
+    width: 100%;
   }
 }
